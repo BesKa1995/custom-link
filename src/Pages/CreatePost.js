@@ -1,11 +1,18 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
+import {useAuth} from '../hoc/useAuth'
 
 
 export const CreatePost = () => {
 	const {id} = useParams()
-	console.log(id)
+	const {singout} = useAuth()
+	const navigate = useNavigate()
 	return (
-		<h1>Create Post</h1>
+		<div>
+			<h1>Create Post</h1>
+			<button onClick={() => singout(() => navigate('/', {replace: true}))}>Logout</button>
+
+		</div>
+
 	)
 }

@@ -3,8 +3,10 @@ import React from 'react'
 
 
 export const CustomLink = ({to, children, ...props}) => {
+
 	const match = useMatch(to)
 	const setActive = () => match ? 'active-link' : ''
+
 	return (
 		<>
 			<Link

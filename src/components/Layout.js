@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react'
-import {Link, NavLink, Outlet, useMatch} from 'react-router-dom'
+import {Link, NavLink, Outlet, useMatch, useParams} from 'react-router-dom'
 import {CustomLink} from './CustomLink'
 
 

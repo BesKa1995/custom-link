@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 export const Blog = () => {
 	const [posts, setPosts] = useState([])
 
-
 	useEffect(() => {
 		axios.get('https://jsonplaceholder.typicode.com/posts')
 			.then(res => res.data)
@@ -15,6 +14,7 @@ export const Blog = () => {
 
 	return (
 		<div>
+			<Link to='/posts/new'>Add new posts</Link>
 			{
 				posts.map(post => (
 					<Link key={post.id} to={`/posts/${post.id}`}>
