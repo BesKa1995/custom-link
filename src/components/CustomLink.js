@@ -2,7 +2,7 @@ import {Link, useMatch} from 'react-router-dom'
 import React from 'react'
 
 
-export const CustomLink = ({to, children, ...props}) => {g
+export const CustomLink = ({to, children, ...props}) => {
 	const match = useMatch(to)
 	const setActive = () => match ? 'active-link' : ''
 	return (
